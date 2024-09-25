@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['simple_20usage_20enable_20em_20all_20em_20cors_20requests_0',['Simple Usage (Enable &lt;em&gt;All&lt;/em&gt; CORS Requests)',['../index.html#autotoc_md19',1,'']]],
+  ['sindresorhus_20object_20assign_20img_20src_20https_3a_20travis_20ci_20org_20sindresorhus_20object_20assign_20svg_20branch_20master_20alt_20build_20status_20a_1',['object-assign &lt;a href=&quot;https://travis-ci.org/sindresorhus/object-assign&quot; &gt;&lt;img src=&quot;https://travis-ci.org/sindresorhus/object-assign.svg?branch=master&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;',['../md_node__modules_2object-assign_2readme.html',1,'']]],
+  ['sindresorhus_20object_20assign_20svg_20branch_20master_20alt_20build_20status_20a_2',['object-assign &lt;a href=&quot;https://travis-ci.org/sindresorhus/object-assign&quot; &gt;&lt;img src=&quot;https://travis-ci.org/sindresorhus/object-assign.svg?branch=master&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;',['../md_node__modules_2object-assign_2readme.html',1,'']]],
+  ['single_20route_3',['Enable CORS for a Single Route',['../index.html#autotoc_md20',1,'']]],
+  ['source_4',['objectAssign(target, [source, ...])',['../md_node__modules_2object-assign_2readme.html#autotoc_md34',1,'']]],
+  ['spec_5',['The CORS Spec',['../md_node__modules_2cors_2_c_o_n_t_r_i_b_u_t_i_n_g.html#autotoc_md1',1,'']]],
+  ['src_20https_3a_20travis_20ci_20org_20sindresorhus_20object_20assign_20svg_20branch_20master_20alt_20build_20status_20a_6',['object-assign &lt;a href=&quot;https://travis-ci.org/sindresorhus/object-assign&quot; &gt;&lt;img src=&quot;https://travis-ci.org/sindresorhus/object-assign.svg?branch=master&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;',['../md_node__modules_2object-assign_2readme.html',1,'']]],
+  ['status_20a_7',['object-assign &lt;a href=&quot;https://travis-ci.org/sindresorhus/object-assign&quot; &gt;&lt;img src=&quot;https://travis-ci.org/sindresorhus/object-assign.svg?branch=master&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;',['../md_node__modules_2object-assign_2readme.html',1,'']]],
+  ['svg_20branch_20master_20alt_20build_20status_20a_8',['object-assign &lt;a href=&quot;https://travis-ci.org/sindresorhus/object-assign&quot; &gt;&lt;img src=&quot;https://travis-ci.org/sindresorhus/object-assign.svg?branch=master&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;',['../md_node__modules_2object-assign_2readme.html',1,'']]]
+];
