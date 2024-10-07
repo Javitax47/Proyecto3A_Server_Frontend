@@ -1,21 +1,27 @@
 var indexSectionsWithContent =
 {
-  0: "cdeilmprstu",
-  1: "r",
-  2: "dms"
+  0: "acdefilmoprstu",
+  1: "ar",
+  2: "f",
+  3: "o",
+  4: "dms"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "files",
-  2: "pages"
+  2: "functions",
+  3: "variables",
+  4: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "Todos",
   1: "Archivos",
-  2: "Páginas"
+  2: "Funciones",
+  3: "Variables",
+  4: "Páginas"
 };
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['instalación_0',['Instalación',['../index.html#autotoc_md5',1,'']]]
+  ['estructura_20del_20proyecto_0',['Estructura del Proyecto',['../index.html#autotoc_md4',1,'']]]
 ];

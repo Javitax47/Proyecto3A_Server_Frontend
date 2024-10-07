@@ -1,8 +1,8 @@
 /**
- * @brief Función asíncrona para obtener los datos más recientes de CO2 y temperatura del servidor.
+ * @brief Función asíncrona para obtener los datos más recientes de ozono y temperatura del servidor.
  *
  * Esta función realiza una solicitud a la API del servidor para obtener los últimos datos
- * de los sensores de CO2 y temperatura. Los datos se utilizan para actualizar la interfaz
+ * de los sensores de ozono y temperatura. Los datos se utilizan para actualizar la interfaz
  * de usuario con los valores actuales.
  *
  * @async
@@ -15,18 +15,22 @@ async function fetchLatestSensorData() {
         const response = await fetch('http://localhost:13000/latest'); // Cambia a la URL de tu servidor
         const data = await response.json(); // Convierte la respuesta a formato JSON
 
-        // Actualizar los valores de CO2 en la página
-        if (data.co2) {
-            document.getElementById('co2Value').textContent = data.co2.value; // Muestra el valor de CO2
+        // Actualizar los valores de ozono en la página
+        if (data.ozono) {
+            document.getElementById('ozonoValue').textContent = data.ozono.value; // Muestra el valor de ozono
+            document.getElementById('ozonoTimestamp').textContent = new Date(data.ozono.timestamp).toLocaleString(); // Formatea y muestra la hora de la medición
         } else {
-            document.getElementById('co2Value').textContent = 'No disponible'; // Mensaje si no hay datos
+            document.getElementById('ozonoValue').textContent = 'No disponible'; // Mensaje si no hay datos
+            document.getElementById('ozonoTimestamp').textContent = 'No disponible'; // Mensaje si no hay datos
         }
 
         // Actualizar los valores de temperatura en la página
         if (data.temperature) {
             document.getElementById('temperatureValue').textContent = data.temperature.value; // Muestra el valor de temperatura
+            document.getElementById('temperatureTimestamp').textContent = new Date(data.temperature.timestamp).toLocaleString(); // Formatea y muestra la hora de la medición
         } else {
             document.getElementById('temperatureValue').textContent = 'No disponible'; // Mensaje si no hay datos
+            document.getElementById('temperatureTimestamp').textContent = 'No disponible'; // Mensaje si no hay datos
         }
 
     } catch (error) {
@@ -43,5 +47,5 @@ async function fetchLatestSensorData() {
  */
 window.onload = () => {
     fetchLatestSensorData(); // Obtener datos iniciales
-    setInterval(fetchLatestSensorData, 1000); // Actualizar cada 5 segundos
+    setInterval(fetchLatestSensorData, 5000); // Actualizar cada 5 segundos
 };

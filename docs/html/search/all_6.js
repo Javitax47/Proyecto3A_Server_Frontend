@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['proyecto_0',['Estructura del Proyecto',['../index.html#autotoc_md4',1,'']]]
+  ['licencia_0',['Licencia',['../index.html#autotoc_md8',1,'']]]
 ];

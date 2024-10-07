@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['características_0',['Características',['../index.html#autotoc_md2',1,'']]],
-  ['contenidos_1',['Tabla de Contenidos',['../index.html#autotoc_md1',1,'']]],
-  ['contribuciones_2',['Contribuciones',['../index.html#autotoc_md7',1,'']]]
+  ['api_2ejs_0',['api.js',['../api_8js.html',1,'']]]
 ];

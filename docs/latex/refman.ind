@@ -1,5 +1,26 @@
 \begin{theindex}
 
+  \item {api.js}
+    \subitem {fetchLatestSensorData}, \hyperpage{5}
+    \subitem {onload}, \hyperpage{6}
+
+  \indexspace
+
+  \item {fetchLatestSensorData}
+    \subitem {api.js}, \hyperpage{5}
+
+  \indexspace
+
+  \item {onload}
+    \subitem {api.js}, \hyperpage{6}
+
+  \indexspace
+
+  \item {README.md}, \hyperpage{5}
+
+  \indexspace
+
   \item {Sistema de Monitoreo de Sensores}, \hyperpage{1}
+  \item {src/app/js/api.js}, \hyperpage{5}
 
 \end{theindex}

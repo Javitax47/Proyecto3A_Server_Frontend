@@ -1,1 +1,7 @@
 \indexentry{Sistema de Monitoreo de Sensores@{Sistema de Monitoreo de Sensores}|hyperpage}{1}
+\indexentry{README.md@{README.md}|hyperpage}{5}
+\indexentry{src/app/js/api.js@{src/app/js/api.js}|hyperpage}{5}
+\indexentry{api.js@{api.js}!fetchLatestSensorData@{fetchLatestSensorData}|hyperpage}{5}
+\indexentry{fetchLatestSensorData@{fetchLatestSensorData}!api.js@{api.js}|hyperpage}{5}
+\indexentry{api.js@{api.js}!onload@{onload}|hyperpage}{6}
+\indexentry{onload@{onload}!api.js@{api.js}|hyperpage}{6}

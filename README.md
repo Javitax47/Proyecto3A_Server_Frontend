@@ -1,6 +1,6 @@
 # Sistema de Monitoreo de Sensores
 
-Este proyecto consiste en un sistema de monitoreo que utiliza un sensor de temperatura y un sensor de CO2. Los datos son enviados desde un dispositivo Arduino a una aplicación frontend, donde se visualizan en tiempo real. La aplicación se comunica con un servidor que almacena y procesa la información.
+Este proyecto consiste en un sistema de monitoreo que utiliza un sensor de temperatura y un sensor de ozono. Los datos son enviados desde un dispositivo Arduino a una aplicación frontend, donde se visualizan en tiempo real. La aplicación se comunica con un servidor que almacena y procesa la información.
 
 ## Tabla de Contenidos
 - [Características](#características)
@@ -13,14 +13,14 @@ Este proyecto consiste en un sistema de monitoreo que utiliza un sensor de tempe
 
 ## Características
 
-- Monitoreo en tiempo real de los niveles de CO2 y temperatura.
+- Monitoreo en tiempo real de los niveles de ozono y temperatura.
 - Interfaz web que muestra los datos de los sensores.
 - Actualización automática de datos cada 5 segundos.
 - Almacenamiento de datos en una base de datos PostgreSQL a través de una API REST.
 
 ## Requisitos
 
-- Arduino con sensor de temperatura y CO2.
+- Arduino con sensor de temperatura y ozono.
 - Node.js y npm para el backend.
 - PostgreSQL para la base de datos.
 - Un entorno web compatible con JavaScript.
