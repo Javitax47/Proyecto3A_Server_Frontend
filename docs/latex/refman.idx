@@ -5,3 +5,7 @@
 \indexentry{fetchLatestSensorData@{fetchLatestSensorData}!api.js@{api.js}|hyperpage}{5}
 \indexentry{api.js@{api.js}!onload@{onload}|hyperpage}{6}
 \indexentry{onload@{onload}!api.js@{api.js}|hyperpage}{6}
+\indexentry{api.js@{api.js}!previousOzoneTimestamp@{previousOzoneTimestamp}|hyperpage}{6}
+\indexentry{previousOzoneTimestamp@{previousOzoneTimestamp}!api.js@{api.js}|hyperpage}{6}
+\indexentry{api.js@{api.js}!previousTemperatureTimestamp@{previousTemperatureTimestamp}|hyperpage}{6}
+\indexentry{previousTemperatureTimestamp@{previousTemperatureTimestamp}!api.js@{api.js}|hyperpage}{6}

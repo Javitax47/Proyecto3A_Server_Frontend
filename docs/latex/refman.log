@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  7 OCT 2024 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  8 OCT 2024 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -951,17 +951,17 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 7.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 15.
+(Font)              scaled to size 10.79993pt on input line 19.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 28.
+(Font)              scaled to size 8.99994pt on input line 32.
 
-Underfull \hbox (badness 10000) detected at line 28
+Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
-)
 
-[5]
+
+[5])
 
 LaTeX Info: Redefining \. on input line 244.
 LaTeX Info: Redefining \% on input line 244.
@@ -986,13 +986,13 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 43BB37A99C5352D37C9FE659D175BC8A;3415.
+(rerunfilecheck)             Checksum: 084501472E16079A8A8D31062E478D96;3895.
  ) 
 Here is how much of TeX's memory you used:
- 19199 strings out of 473579
- 305407 string characters out of 5732263
- 738790 words of memory out of 5000000
- 41713 multiletter control sequences out of 15000+600000
+ 19207 strings out of 473579
+ 305663 string characters out of 5732263
+ 738982 words of memory out of 5000000
+ 41717 multiletter control sequences out of 15000+600000
  608022 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,12n,117p,499b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1001,10 +1001,10 @@ live/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2024/texmf-
 dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type
 1/urw/helvetic/uhvb8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic
 /uhvr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (11 pages, 75082 bytes).
+Output written on refman.pdf (11 pages, 76670 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

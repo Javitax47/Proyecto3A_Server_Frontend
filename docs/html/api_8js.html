@@ -103,6 +103,10 @@ Funciones</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a02fee974a763681799b4e33d041e86dd" id="r_a02fee974a763681799b4e33d041e86dd"><td class="memItemLeft" align="right" valign="top">let&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02fee974a763681799b4e33d041e86dd">previousOzoneTimestamp</a> = null</td></tr>
+<tr class="separator:a02fee974a763681799b4e33d041e86dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ac0112ba30d60a9bb192bd002c3a51" id="r_ae2ac0112ba30d60a9bb192bd002c3a51"><td class="memItemLeft" align="right" valign="top">let&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2ac0112ba30d60a9bb192bd002c3a51">previousTemperatureTimestamp</a> = null</td></tr>
+<tr class="separator:ae2ac0112ba30d60a9bb192bd002c3a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43397fd3516cd230995b3edbbadff48b" id="r_a43397fd3516cd230995b3edbbadff48b"><td class="memItemLeft" align="right" valign="top">window&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43397fd3516cd230995b3edbbadff48b">onload</a></td></tr>
 <tr class="memdesc:a43397fd3516cd230995b3edbbadff48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que se ejecuta al cargar la página.  <br /></td></tr>
 <tr class="separator:a43397fd3516cd230995b3edbbadff48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,12 +147,40 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Valor inicial:</b><div class="fragment"><div class="line">= () =&gt; {</div>
 <div class="line">    <a class="code hl_function" href="#aed71bcaa7583f8de555cdde8eb40223f">fetchLatestSensorData</a>(); </div>
-<div class="line">    setInterval(<a class="code hl_function" href="#aed71bcaa7583f8de555cdde8eb40223f">fetchLatestSensorData</a>, 5000); </div>
+<div class="line">    setInterval(<a class="code hl_function" href="#aed71bcaa7583f8de555cdde8eb40223f">fetchLatestSensorData</a>, 1000); </div>
 <div class="line">}</div>
-<div class="ttc" id="aapi_8js_html_aed71bcaa7583f8de555cdde8eb40223f"><div class="ttname"><a href="#aed71bcaa7583f8de555cdde8eb40223f">fetchLatestSensorData</a></div><div class="ttdeci">async function fetchLatestSensorData()</div><div class="ttdoc">Función asíncrona para obtener los datos más recientes de ozono y temperatura del servidor.</div><div class="ttdef"><b>Definition</b> api.js:12</div></div>
+<div class="ttc" id="aapi_8js_html_aed71bcaa7583f8de555cdde8eb40223f"><div class="ttname"><a href="#aed71bcaa7583f8de555cdde8eb40223f">fetchLatestSensorData</a></div><div class="ttdeci">async function fetchLatestSensorData()</div><div class="ttdoc">Función asíncrona para obtener los datos más recientes de ozono y temperatura del servidor.</div><div class="ttdef"><b>Definition</b> api.js:15</div></div>
 </div><!-- fragment -->
 <p>Función que se ejecuta al cargar la página. </p>
-<p>Llama a la función <code>fetchLatestSensorData</code> para obtener los datos iniciales de los sensores y configura un intervalo para actualizar los datos cada 5 segundos. </p>
+<p>Llama a la función <code>fetchLatestSensorData</code> para obtener los datos iniciales de los sensores y configura un intervalo para actualizar los datos cada 1 segundo. </p>
+
+</div>
+</div>
+<a id="a02fee974a763681799b4e33d041e86dd" name="a02fee974a763681799b4e33d041e86dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02fee974a763681799b4e33d041e86dd">&#9670;&#160;</a></span>previousOzoneTimestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">let previousOzoneTimestamp = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2ac0112ba30d60a9bb192bd002c3a51" name="ae2ac0112ba30d60a9bb192bd002c3a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ac0112ba30d60a9bb192bd002c3a51">&#9670;&#160;</a></span>previousTemperatureTimestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">let previousTemperatureTimestamp = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

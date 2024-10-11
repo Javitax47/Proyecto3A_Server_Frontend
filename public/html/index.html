@@ -8,11 +8,20 @@
 </head>
 <body>
 <h1>Datos de Sensores</h1>
-<div id="sensorData">
-    <p>ozono: <span id="ozonoValue">Cargando...</span></p>
-    <p>Última medición ozono: <span id="ozonoTimestamp">Cargando...</span></p>
-    <p>Temperatura: <span id="temperatureValue">Cargando...</span></p>
-    <p>Última medición Temperatura: <span id="temperatureTimestamp">Cargando...</span></p>
+<div class="container">
+    <h1>Monitor de Ozono y Temperatura</h1>
+
+    <div class="sensor">
+        <h2><span id="indicador-deteccion-ozono-izq"></span> Sensor de Ozono <span id="indicador-deteccion-ozono-der"></span></h2>
+        <p><strong>Valor actual:</strong> <span id="ozone-value">0</span> ppm</p>
+        <p><strong>Última medición:</strong> <span id="ozone-last-updated">--/--/----, --:--:--</span></p>
+    </div>
+
+    <div class="sensor">
+        <h2><span id="indicador-deteccion-temp-izq"></span> Sensor de Temperatura <span id="indicador-deteccion-temp-der"></span></h2>
+        <p><strong>Valor actual:</strong> <span id="temperature-value">0</span> °C</p>
+        <p><strong>Última medición:</strong> <span id="temperature-last-updated">--/--/----, --:--:--</span></p>
+    </div>
 </div>
 <script src="../../src/app/js/api.js"></script>
 </body>

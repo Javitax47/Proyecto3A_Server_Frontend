@@ -1,3 +1,6 @@
+let previousOzoneTimestamp = null; // Variable para almacenar la última fecha de ozono
+let previousTemperatureTimestamp = null; // Variable para almacenar la última fecha de temperatura
+
 /**
  * @brief Función asíncrona para obtener los datos más recientes de ozono y temperatura del servidor.
  *
@@ -17,25 +20,56 @@ async function fetchLatestSensorData() {
 
         // Actualizar los valores de ozono en la página
         if (data.ozono) {
-            document.getElementById('ozonoValue').textContent = data.ozono.value; // Muestra el valor de ozono
-            document.getElementById('ozonoTimestamp').textContent = new Date(data.ozono.timestamp).toLocaleString(); // Formatea y muestra la hora de la medición
+            const ozoneTimestamp = new Date(data.ozono.timestamp).toLocaleString();
+
+            if (ozoneTimestamp !== previousOzoneTimestamp) {
+                document.getElementById('ozone-value').textContent = data.ozono.value; // Muestra el valor de ozono
+                document.getElementById('ozone-last-updated').textContent = ozoneTimestamp; // Muestra la hora de la medición
+
+                // Mostrar el indicador solo si la fecha es diferente
+                document.getElementById('indicador-deteccion-ozono-izq').textContent = "·";
+                document.getElementById('indicador-deteccion-ozono-der').textContent = "·";
+                setTimeout(function () {
+                    document.getElementById('indicador-deteccion-ozono-izq').textContent = "";
+                    document.getElementById('indicador-deteccion-ozono-der').textContent = "";
+                }, 200);
+
+                previousOzoneTimestamp = ozoneTimestamp; // Actualiza el timestamp anterior
+            }
         } else {
-            document.getElementById('ozonoValue').textContent = 'No disponible'; // Mensaje si no hay datos
-            document.getElementById('ozonoTimestamp').textContent = 'No disponible'; // Mensaje si no hay datos
+            document.getElementById('ozone-value').textContent = 'No disponible';
+            document.getElementById('ozone-last-updated').textContent = 'No disponible';
         }
 
         // Actualizar los valores de temperatura en la página
         if (data.temperature) {
-            document.getElementById('temperatureValue').textContent = data.temperature.value; // Muestra el valor de temperatura
-            document.getElementById('temperatureTimestamp').textContent = new Date(data.temperature.timestamp).toLocaleString(); // Formatea y muestra la hora de la medición
+            const temperatureTimestamp = new Date(data.temperature.timestamp).toLocaleString();
+
+            if (temperatureTimestamp !== previousTemperatureTimestamp) {
+                document.getElementById('temperature-value').textContent = data.temperature.value; // Muestra el valor de temperatura
+                document.getElementById('temperature-last-updated').textContent = temperatureTimestamp; // Muestra la hora de la medición
+
+                // Mostrar el indicador solo si la fecha es diferente
+                document.getElementById('indicador-deteccion-temp-izq').textContent = "·";
+                document.getElementById('indicador-deteccion-temp-der').textContent = "·";
+                setTimeout(function () {
+                    document.getElementById('indicador-deteccion-temp-izq').textContent = "";
+                    document.getElementById('indicador-deteccion-temp-der').textContent = "";
+                }, 200);
+
+                previousTemperatureTimestamp = temperatureTimestamp; // Actualiza el timestamp anterior
+            }
         } else {
-            document.getElementById('temperatureValue').textContent = 'No disponible'; // Mensaje si no hay datos
-            document.getElementById('temperatureTimestamp').textContent = 'No disponible'; // Mensaje si no hay datos
+            document.getElementById('temperature-value').textContent = 'No disponible';
+            document.getElementById('temperature-last-updated').textContent = 'No disponible';
         }
 
     } catch (error) {
-        // Manejo de errores: muestra un mensaje en la consola si ocurre un error al obtener los datos
-        console.error('Error al obtener los datos de sensores:', error);
+        document.getElementById('ozone-value').textContent = 'Sin conexión';
+        document.getElementById('ozone-last-updated').textContent = '--/--/----, --:--:--';
+        document.getElementById('temperature-value').textContent = 'Sin conexión';
+        document.getElementById('temperature-last-updated').textContent = '--/--/----, --:--:--';
+        console.log(error);
     }
 }
 
@@ -43,9 +77,9 @@ async function fetchLatestSensorData() {
  * @brief Función que se ejecuta al cargar la página.
  *
  * Llama a la función `fetchLatestSensorData` para obtener los datos iniciales de los sensores
- * y configura un intervalo para actualizar los datos cada 5 segundos.
+ * y configura un intervalo para actualizar los datos cada 1 segundo.
  */
 window.onload = () => {
     fetchLatestSensorData(); // Obtener datos iniciales
-    setInterval(fetchLatestSensorData, 5000); // Actualizar cada 5 segundos
+    setInterval(fetchLatestSensorData, 1000); // Actualizar cada segundo
 };

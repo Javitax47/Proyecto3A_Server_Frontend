@@ -3,6 +3,8 @@
   \item {api.js}
     \subitem {fetchLatestSensorData}, \hyperpage{5}
     \subitem {onload}, \hyperpage{6}
+    \subitem {previousOzoneTimestamp}, \hyperpage{6}
+    \subitem {previousTemperatureTimestamp}, \hyperpage{6}
 
   \indexspace
 
@@ -12,6 +14,13 @@
   \indexspace
 
   \item {onload}
+    \subitem {api.js}, \hyperpage{6}
+
+  \indexspace
+
+  \item {previousOzoneTimestamp}
+    \subitem {api.js}, \hyperpage{6}
+  \item {previousTemperatureTimestamp}
     \subitem {api.js}, \hyperpage{6}
 
   \indexspace

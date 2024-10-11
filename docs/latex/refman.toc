@@ -18,4 +18,6 @@
 \contentsline {subsubsection}{\numberline {3.2.1.1}fetchLatestSensorData()}{5}{subsubsection.3.2.1.1}%
 \contentsline {subsection}{\numberline {3.2.2}Documentación de variables}{6}{subsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.2.1}onload}{6}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}previousOzoneTimestamp}{6}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}previousTemperatureTimestamp}{6}{subsubsection.3.2.2.3}%
 \contentsline {chapter}{\'{I}ndice alfab\'{e}tico}{7}{section*.3}%

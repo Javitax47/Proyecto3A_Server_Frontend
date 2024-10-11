@@ -8,6 +8,10 @@ async function \mbox{\hyperlink{api_8js_aed71bcaa7583f8de555cdde8eb40223f}{fetch
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
+let \mbox{\hyperlink{api_8js_a02fee974a763681799b4e33d041e86dd}{previous\+Ozone\+Timestamp}} = null
+\item 
+let \mbox{\hyperlink{api_8js_ae2ac0112ba30d60a9bb192bd002c3a51}{previous\+Temperature\+Timestamp}} = null
+\item 
 window \mbox{\hyperlink{api_8js_a43397fd3516cd230995b3edbbadff48b}{onload}}
 \begin{DoxyCompactList}\small\item\em Función que se ejecuta al cargar la página. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -41,7 +45,7 @@ window onload}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{=\ ()\ =>\ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{api_8js_aed71bcaa7583f8de555cdde8eb40223f}{fetchLatestSensorData}}();\ }
-\DoxyCodeLine{\ \ \ \ setInterval(\mbox{\hyperlink{api_8js_aed71bcaa7583f8de555cdde8eb40223f}{fetchLatestSensorData}},\ 5000);\ }
+\DoxyCodeLine{\ \ \ \ setInterval(\mbox{\hyperlink{api_8js_aed71bcaa7583f8de555cdde8eb40223f}{fetchLatestSensorData}},\ 1000);\ }
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
@@ -49,4 +53,15 @@ window onload}
 
 Función que se ejecuta al cargar la página. 
 
-Llama a la función {\ttfamily fetch\+Latest\+Sensor\+Data} para obtener los datos iniciales de los sensores y configura un intervalo para actualizar los datos cada 5 segundos. 
+Llama a la función {\ttfamily fetch\+Latest\+Sensor\+Data} para obtener los datos iniciales de los sensores y configura un intervalo para actualizar los datos cada 1 segundo. \Hypertarget{api_8js_a02fee974a763681799b4e33d041e86dd}\index{api.js@{api.js}!previousOzoneTimestamp@{previousOzoneTimestamp}}
+\index{previousOzoneTimestamp@{previousOzoneTimestamp}!api.js@{api.js}}
+\doxysubsubsection{\texorpdfstring{previousOzoneTimestamp}{previousOzoneTimestamp}}
+{\footnotesize\ttfamily \label{api_8js_a02fee974a763681799b4e33d041e86dd} 
+let previous\+Ozone\+Timestamp = null}
+
+\Hypertarget{api_8js_ae2ac0112ba30d60a9bb192bd002c3a51}\index{api.js@{api.js}!previousTemperatureTimestamp@{previousTemperatureTimestamp}}
+\index{previousTemperatureTimestamp@{previousTemperatureTimestamp}!api.js@{api.js}}
+\doxysubsubsection{\texorpdfstring{previousTemperatureTimestamp}{previousTemperatureTimestamp}}
+{\footnotesize\ttfamily \label{api_8js_ae2ac0112ba30d60a9bb192bd002c3a51} 
+let previous\+Temperature\+Timestamp = null}
+
