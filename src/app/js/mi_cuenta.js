@@ -10,6 +10,12 @@ document.getElementById('accountForm').addEventListener('submit', async function
         alert('Las contraseñas no coinciden. Inténtalo de nuevo.');
         return;
     }
+    // Check if the password has at least 8 characters
+    if (password.length < 8) {
+        alert('La contraseña debe tener al menos 8 caracteres.');
+        return;
+    }
+
 
     try {
         const response = await fetch('http://localhost:13000/users/update', {

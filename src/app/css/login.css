@@ -1,0 +1,153 @@
+/* login.css */
+
+body {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav ul li:last-child {
+    margin-left: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.login-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form input {
+    font-family: 'Space Mono', monospace;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #000;
+    border-radius: 50px;
+    outline: none;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    font-family: 'Space Mono', monospace;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+#olvidar_contra{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    max-width: 400px;
+    font-size: 0.8rem;
+   
+}
+#olvidar_contra a {
+    color: #000;
+    text-decoration: none;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+}
+
+
+.login-options a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
