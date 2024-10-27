@@ -1,4 +1,4 @@
-// login.js
+// registro.js
 
 // Cargar el encabezado desde header.html
 fetch('../assets/includes/header.html')
@@ -8,7 +8,7 @@ fetch('../assets/includes/header.html')
     });
 
 // Validar que la contraseña tenga al menos 8 caracteres
-document.querySelector('.login-form').addEventListener('submit', function(event) {
+document.querySelector('.register-form').addEventListener('submit', function(event) {
     const password = document.getElementById('password').value;
     
     if (password.length < 8) {

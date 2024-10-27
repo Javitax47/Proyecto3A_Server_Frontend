@@ -10,23 +10,25 @@
     <link rel="stylesheet" href="../../src/app/css/login.css">
 </head>
 <body>
-    <script src="../../src/app/js/login.js"></script>
     <main>
-        <section class="login-section">
-            <h1>Iniciar sesión</h1>
-            <form class="login-form" action="#" method="post">
-                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                <div id="olvidar_contra">
-                    <a href="../pages/forgot_password.html">Olvidé mi contraseña</a>
-                </div>
-                <button type="submit" class="submit-btn">Siguiente</button>
-                <div class="login-options">
-                    <p>¿Todavía no tienes una cuenta?</p>
-                    <a href="../pages/register.html">Crear cuenta</a>
-                </div>
-            </form>
-        </section>
+        <div class="container">
+            <section class="login-section">
+                <h1>Iniciar sesión</h1>
+                <form class="login-form" action="#" method="post">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <div id="olvidar_contra">
+                        <a href="../pages/forgot_password.html">Olvidé mi contraseña</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Siguiente</button>
+                    <div class="login-options">
+                        <p>¿Todavía no tienes una cuenta?</p>
+                        <a href="../html/registro.html">Crear cuenta</a>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
+    <script src="../../src/app/js/login.js"></script>
 </body>
 </html>
