@@ -1,4 +1,4 @@
-/* login.css */
+/* register.css */
 
 body {
     font-family: 'Space Mono', monospace;
@@ -50,7 +50,7 @@ nav ul li a {
     font-weight: 400;
 }
 
-.login-section {
+.register-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,22 +59,22 @@ nav ul li a {
     text-align: center;
 }
 
-.login-section h1 {
+.register-section h1 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 40px;
 }
 
-.login-form {
+.register-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     width: 100%;
     max-width: 400px;
 }
 
-.login-form input {
+.register-form input {
     font-family: 'Space Mono', monospace;
     padding: 15px;
     font-size: 1rem;
@@ -98,7 +98,6 @@ nav ul li a {
     font-weight: 700;
     transition: background-color 0.3s ease;
     width: 100%;
-    margin-top: 5%;
 }
 
 .submit-btn:hover {
@@ -128,35 +127,16 @@ nav ul li a {
     height: 20px;
 }
 
-#olvidar_contra{
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    max-width: 400px;
-    font-size: 0.8rem;
-   
-}
-#olvidar_contra a {
-    color: #000;
-    text-decoration: none;
-}
-
-.login-options {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    max-width: 400px;
-    font-size: 1rem;
-}
-
-
-.login-options a {
-    color: #000;
-    text-decoration: none;
+.register-options {
+    margin-top: 20px;
     font-size: 0.9rem;
 }
 
-.login-options a:hover {
+.register-options a {
+    color: #000;
+    text-decoration: none;
+}
+
+.register-options a:hover {
     text-decoration: underline;
 }
