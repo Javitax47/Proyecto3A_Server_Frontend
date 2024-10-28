@@ -24,5 +24,14 @@
     </div>
 </div>
 <script src="../../src/app/js/api.js"></script>
+
+<!-- Footer importado dinámicamente -->
+<script>
+    fetch('../assets/includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        });
+</script>
 </body>
 </html>
