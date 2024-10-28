@@ -1,15 +1,7 @@
 // login.js
 
-// Cargar el encabezado desde header.html
-fetch('../assets/includes/header.html')
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML('afterbegin', data);
-    });
-
-// Validar que la contraseña tenga al menos 8 caracteres
-document.querySelector('.login-form').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Evita el envío del formulario por defecto
+document.getElementById('login-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -20,23 +12,23 @@ document.querySelector('.login-form').addEventListener('submit', async function(
     }
 
     try {
-        const response = await fetch('http://localhost:13000/login', {
-            method: 'POST',
+        const response = await fetch(`http://localhost:13000/usuarios/login/${email}/${password}`, {
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email, password })
+            }
         });
 
         if (response.ok) {
-            alert('Inicio de sesión exitoso.');
-            window.location.href = 'profile.html'; // Redirigir a la página de perfil
+            // Guardar email y contraseña en localStorage
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            window.location.href = 'mi_cuenta.html';
         } else {
-            const errorMessage = await response.text();
-            alert(`Error al iniciar sesión: ${errorMessage}`);
+            alert('Email o contraseña incorrectos.');
         }
     } catch (error) {
         console.error('Error:', error);
-        alert('Error en el inicio de sesión. Por favor, intenta de nuevo más tarde.');
     }
 });
