@@ -5,30 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airmonitor - Crea cuenta</title>
-    <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../../src/app/css/registro.css">
+    <link rel="stylesheet" href="../../src/app/css/header.css">
+    <link rel="stylesheet" href="../../src/app/css/footer.css">
 </head>
 <body>
-<main>
-    <div class="container">
-        <section class="register-section">
-            <h1>Crea cuenta</h1>
-            <form class="register-form" action="#" method="post">
-                <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
-                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                <button type="submit" class="submit-btn">Registrar</button>
-                <div class="register-options">
-                    <a href="../html/login.html">Ya tengo una cuenta</a>
-                </div>
-                <div class="navigation">
-                    <button onclick="location.href='index.html'">Volver a Sensores</button>
-                </div>
-            </form>
-        </section>
-    </div>
-</main>
-<script src="../../src/app/js/registro.js"></script>
+    <!-- Aqui empieza el Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../pages/index.html" class="bold">Airmonitor</a></li>
+                <li><a href="../pages/index.html#about-us">Sobre nosotros</a></li>
+                <li><a href="../pages/visualizer.html">Visualizador</a></li>
+                <li><a href="../pages/contact.html">Contacto</a></li>
+            </ul>
+            <a href="../html/login.html" class="login">Iniciar sesión</a>
+        </nav>
+    </header>
+    <!-- Aqui eacaba el Header -->
+    <main>
+        <div class="container">
+            <section class="register-section">
+                <h1>Crea cuenta</h1>
+                <form class="register-form" action="#" method="post">
+                    <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit" class="submit-btn">Registrar</button>
+                    <div class="register-options">
+                        <a href="../html/login.html">Ya tengo una cuenta</a>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="../../src/app/js/registro.js"></script>
+
+    <!-- Aqui empieza el Footer  -->
+    <footer>
+        <p>&copy;2022 Airmonitor</p>
+        <nav>
+            <a href="#">Política de Privacidad</a> | 
+            <a href="#">Términos y Condiciones</a> | 
+            <a href="../pages/contact.html">Contacto</a>
+        </nav>
+    </footer>
+    <!-- Aqui acaba el Footer  -->
 </body>
 </html>

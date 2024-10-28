@@ -27,13 +27,14 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 document.getElementById('accountForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Evita el envío del formulario por defecto
 
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
+    // Verificar que las contraseñas coincidan
     if (password !== confirmPassword) {
         alert('Las contraseñas no coinciden. Inténtalo de nuevo.');
         return;
@@ -60,5 +61,6 @@ document.getElementById('accountForm').addEventListener('submit', async function
         }
     } catch (error) {
         console.error('Error:', error);
+        alert('Error en la conexión al servidor. Por favor, intenta de nuevo más tarde.');
     }
 });
