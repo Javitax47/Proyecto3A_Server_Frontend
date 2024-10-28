@@ -10,22 +10,25 @@
     <link rel="stylesheet" href="../../src/app/css/registro.css">
 </head>
 <body>
-    <main>
-        <div class="container">
-            <section class="register-section">
-                <h1>Crea cuenta</h1>
-                <form class="register-form" action="#" method="post">
-                    <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
-                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <button type="submit" class="submit-btn">Registrar</button>
-                    <div class="register-options">
-                        <a href="../html/login.html">Ya tengo una cuenta</a>
-                    </div>
-                </form>
-            </section>
-        </div>
-    </main>
-    <script src="../../src/app/js/registro.js"></script>
+<main>
+    <div class="container">
+        <section class="register-section">
+            <h1>Crea cuenta</h1>
+            <form class="register-form" action="#" method="post">
+                <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <button type="submit" class="submit-btn">Registrar</button>
+                <div class="register-options">
+                    <a href="../html/login.html">Ya tengo una cuenta</a>
+                </div>
+                <div class="navigation">
+                    <button onclick="location.href='index.html'">Volver a Sensores</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</main>
+<script src="../../src/app/js/registro.js"></script>
 </body>
 </html>

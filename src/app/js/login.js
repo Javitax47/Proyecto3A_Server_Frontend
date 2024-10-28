@@ -24,7 +24,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
             localStorage.setItem('email', email);
             localStorage.setItem('password', password);
 
-            window.location.href = 'mi_cuenta.html';
+            window.location.href = 'index.html';
         } else {
             alert('Email o contraseña incorrectos.');
         }

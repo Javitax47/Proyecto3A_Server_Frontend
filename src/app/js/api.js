@@ -12,10 +12,14 @@ let previousTemperatureTimestamp = null; // Variable para almacenar la última f
  * @function fetchLatestSensorData
  * @returns {Promise<void>} No devuelve ningún valor.
  */
+
+
 async function fetchLatestSensorData() {
     try {
+        const email = localStorage.getItem('email');
+
         // Realiza una solicitud HTTP GET a la URL del servidor para obtener los datos más recientes
-        const response = await fetch(`http://localhost:13000/latestByEmail/correo@gmail.com`);
+        const response = await fetch(`http://localhost:13000/latestByEmail/${email}`);
         const data = await response.json(); // Convierte la respuesta a formato JSON
 
         // Actualizar los valores de ozono en la página
