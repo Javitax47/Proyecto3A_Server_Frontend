@@ -12,6 +12,20 @@ body {
     min-height: 100vh;
 }
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container > label{
+    text-align: left;
+    font-size: 0.9em;
+}
+
+#terms{
+    width: 25px;
+}
+
 header {
     position: fixed;
     top: 0;

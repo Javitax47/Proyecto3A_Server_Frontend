@@ -1,0 +1,31 @@
+footer {
+    font-family: 'Poppins', sans-serif;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    position: relative;
+    left: 0;
+    box-sizing: border-box;
+    margin-top: 4rem; /* Espacio adicional encima del footer */
+}
+nav {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}

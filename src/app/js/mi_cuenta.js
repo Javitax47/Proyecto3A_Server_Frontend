@@ -27,24 +27,50 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 document.getElementById('accountForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Evita el envío del formulario por defecto
 
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
+    const passwordActual = document.getElementById('password_actual').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
+    // Verificar que las contraseñas nuevas coincidan
     if (password !== confirmPassword) {
         alert('Las contraseñas no coinciden. Inténtalo de nuevo.');
         return;
     }
+
+    // Verificar que la nueva contraseña tenga al menos 8 caracteres
     if (password.length < 8) {
-        alert('La contraseña debe tener al menos 8 caracteres.');
+        alert('La nueva contraseña debe tener al menos 8 caracteres.');
         return;
     }
 
+    // Verificar que la contraseña actual sea correcta
     try {
-        const response = await fetch('http://localhost:13000/users/update', {
+        const verifyResponse = await fetch('http://localhost:13000/usuarios/verify-password', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({email: email, password: passwordActual })
+        });
+
+        const verifyResult = await verifyResponse.json();
+        if (!verifyResponse.ok || !verifyResult.success) {
+            alert('La contraseña actual es incorrecta. Por favor, inténtalo de nuevo.');
+            return;
+        }
+    } catch (error) {
+        console.error('Error en la verificación de la contraseña actual:', error);
+        alert('Error en la conexión al servidor. Por favor, intenta de nuevo más tarde.');
+        return;
+    }
+
+    // Si la contraseña actual es correcta, proceder con la actualización
+    try {
+        const updateResponse = await fetch('http://localhost:13000/users/update', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -52,13 +78,15 @@ document.getElementById('accountForm').addEventListener('submit', async function
             body: JSON.stringify({ username, email, password })
         });
 
-        if (response.ok) {
+        if (updateResponse.ok) {
             alert('Perfil actualizado correctamente.');
+            window.location.href = 'index.html';
         } else {
-            alert('Error al actualizar el perfil.');
-            console.error('Error:', response);
+            const errorMessage = await updateResponse.text(); // Obtener mensaje de error del servidor
+            alert('Error al actualizar el perfil: ' + errorMessage);
         }
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error en la actualización del perfil:', error);
+        alert('Error en la conexión al servidor. Por favor, intenta de nuevo más tarde.');
     }
 });

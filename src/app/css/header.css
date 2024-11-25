@@ -1,0 +1,49 @@
+/* Aplica Poppins al texto en el header */
+header {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    margin: auto;
+}
+
+/* Contenedor del nav y la opción de login para distribución */
+nav {
+    display: flex;
+    align-items: center;
+    height: 10%;
+}
+
+/* Estilo para el ul dentro del nav */
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces de navegación */
+nav ul li {
+    margin: 0 20px; /* Espacio horizontal entre los elementos del menú */
+}
+
+nav ul li a, .login {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding: 10px; /* Espacio adicional alrededor del enlace */
+}
+
+/* Estilo específico para el enlace de login */
+.login {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px; /* Ajustar el padding según sea necesario */
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    margin-right: 20px;;
+    margin-left: auto; /* Mueve el enlace de login a la derecha */
+}
