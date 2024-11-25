@@ -35,7 +35,7 @@ document.getElementById('accountForm').addEventListener('submit', async function
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
-    // Verificar que las contraseñas nuevas coincidan
+    // Verificar que las contraseñas coincidan
     if (password !== confirmPassword) {
         alert('Las contraseñas no coinciden. Inténtalo de nuevo.');
         return;
@@ -86,7 +86,7 @@ document.getElementById('accountForm').addEventListener('submit', async function
             alert('Error al actualizar el perfil: ' + errorMessage);
         }
     } catch (error) {
-        console.error('Error en la actualización del perfil:', error);
+        console.error('Error:', error);
         alert('Error en la conexión al servidor. Por favor, intenta de nuevo más tarde.');
     }
 });
