@@ -1,0 +1,186 @@
+/* General */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Header transparente */
+header.navbar {
+    background: transparent !important;
+    z-index: 1000;
+    border-bottom: none;
+}
+
+header .navbar-brand img {
+    height: 20px; /* Tamaño más pequeño del logo */
+}
+
+header .navbar-nav .nav-link,
+header .nav-link {
+    color: white !important; /* Blanco por defecto */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+header .nav-link.text-white {
+    color: white !important; /* Forzamos blanco */
+    margin-left: auto; /* Aseguramos que se mueva a la derecha */
+}
+
+header .nav-link:hover {
+    color: rgba(255, 255, 255, 0.7) !important; /* Gris translúcido al pasar el mouse */
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/index1.png') no-repeat center center / cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 5rem; /* Aumentar tamaño */
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.scroll-down {
+    margin-top: 40px; /* Espacio entre el texto y la flecha */
+    display: inline-block;
+    text-align: center;
+}
+
+.scroll-down p {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.chevron {
+    width: 30px;
+    height: 30px;
+    animation: bounce 2s infinite;
+    filter: invert(100%);
+}
+
+/* Animación para la flecha */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+/* Titles Styling */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+hr {
+    border-top: 2px solid #333;
+    width: 50px;
+    margin: 20px auto;
+}
+
+/* Text Styling */
+h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Images */
+.img-fluid {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Sección con imagen de fondo */
+section.bg-light {
+    background: url('../assets/images/happy_users.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    color: #333;
+}
+
+/* Ajustes adicionales para textos sobre fondo */
+section.bg-light h2,
+section.bg-light p {
+    color: #fff; /* Cambiamos texto a blanco para contraste */
+}
+
+section.bg-light img {
+    display: none; /* Ocultamos la imagen `<img>` original si no es necesaria */
+}
+
+/* Imágenes */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px; /* Suaviza las esquinas */
+}
+
+/* Sección "Join Us" */
+.join-us {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    text-align: center;
+    padding: 60px 0;
+}
+
+.join-us img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para la imagen */
+}
+
+.join-us h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.join-us hr {
+    border-top: 2px solid #3e3101; /* Línea roja */
+    width: 60px;
+    margin: 20px auto;
+}
+
+.join-us p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.join-us .btn-primary {
+    background-color: #AB2C79; /* Botón rojo */
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.join-us .btn-primary:hover {
+    background-color: #AB2C79; /* Botón más oscuro al hacer hover */
+}

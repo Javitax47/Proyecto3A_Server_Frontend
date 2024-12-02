@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  web:
+    image: php:8.1-apache # Usa PHP con Apache
+    container_name: airmonitor-web
+    ports:
+      - "8080:80" # El puerto 8080 de tu máquina apunta al puerto 80 del contenedor
+    volumes:
+      - .:/var/www/html # Monta tu proyecto en el contenedor
+    restart: always # Reinicia automáticamente si algo falla

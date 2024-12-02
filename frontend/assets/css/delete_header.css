@@ -1,0 +1,40 @@
+/* Aplica Poppins al texto en el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Espacio entre las opciones */
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Aplica la fuente Poppins a los enlaces del header */
+nav ul li a, .login {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+nav ul li:last-child {
+    margin-left: auto;
+}
+
+.login {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
