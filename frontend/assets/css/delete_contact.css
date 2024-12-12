@@ -1,0 +1,67 @@
+/* contact.css */
+
+/* Sección de contacto */
+.contact-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.contact-section h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #000;
+    border-radius: 30px; /* Bordes redondeados estilo píldora */
+    outline: none;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: none; /* Evita que se redimensione el área de texto */
+}
+
+/* Estilo del botón */
+.submit-btn {
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 30px; /* Bordes redondeados estilo píldora */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}

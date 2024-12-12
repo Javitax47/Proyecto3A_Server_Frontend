@@ -1,0 +1,14 @@
+/* Footer styles */
+footer {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #eaeaea;
+}
+
+footer a:hover {
+    color: #b96869;
+}

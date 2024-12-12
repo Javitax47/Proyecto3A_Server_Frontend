@@ -1,0 +1,827 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+/* Header general */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* Espaciado entre el logo y los enlaces */
+}
+
+.logo img {
+    height: 18px;
+    width: auto;
+}
+
+.nav-left ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem; /* Espaciado entre los enlaces */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left a {
+    text-decoration: none;
+    font-weight: 400; /* Regular */
+}
+
+.nav-left a:hover {
+    text-decoration: underline;
+}
+
+.nav-right a {
+    text-decoration: none;
+    font-weight: 400; /* Regular */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Header transparente */
+
+.header-transparent {
+    background: transparent; /* Sin fondo */
+    color: #fff; /* Texto en blanco */
+}
+
+.header-transparent .nav-left a,
+.header-transparent .nav-right a {
+    color: #fff; /* Texto blanco */
+}
+
+.header-transparent .nav-right a {
+    border: 1px solid #fff; /* Borde blanco */
+}
+
+.header-transparent .nav-right a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Header sólido (para contact.html) */
+.header-solid {
+    background: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    position: relative; /* Asegura que se vea correctamente */
+}
+
+.header-solid .nav-left a,
+.header-solid .nav-right a {
+    color: #000; /* Texto negro */
+}
+
+.header-solid .nav-right a {
+    border: 1px solid #000; /* Borde negro */
+}
+
+.header-solid .nav-right a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Hover gris claro */
+}
+
+/* Hero Section Styles */
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background: url('../images/index1.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Texto grande */
+    font-weight: 700; /* Negrita */
+    margin-bottom: 2rem; /* Espaciado con el botón */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para visibilidad */
+}
+
+.cta {
+    font-size: 1.25rem; /* Tamaño del texto */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400; /* Regular */
+    margin-bottom: 1rem; /* Espaciado con la flecha */
+}
+
+.arrow {
+    position: relative;
+    animation: bounce 2s infinite; /* Animación para mover la flecha */
+}
+
+.arrow img {
+    width: 40px; /* Tamaño más pequeño */
+    height: auto;
+    filter: invert(1); /* Flecha blanca */
+}
+
+/* Animación */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sección About */
+
+.about {
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-divider.divider-black {
+    width: 50%; /* Ajusta el ancho si necesitas algo más corto */
+    margin: 2rem auto; /* Centra el divisor horizontalmente */
+    border: none;
+    border-top: 2px solid #000; /* Negro */
+    box-sizing: content-box; /* Evita interferencias de otros estilos */
+}
+
+.about .content {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+}
+
+.about p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    max-width: 70%; /* Reduce el ancho máximo al 70% del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 2rem;
+}
+
+/* Sección Nuestro Producto */
+.producto-seccion {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Fondo claro */
+    text-align: center;
+}
+
+.producto-seccion .titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.producto-seccion .introduccion {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.producto-seccion .caracteristicas,
+.producto-seccion .como-funciona,
+.producto-seccion .recompensas {
+    text-align: left;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.producto-seccion h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.producto-seccion ul,
+.producto-seccion ol {
+    margin-left: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.producto-seccion ul li,
+.producto-seccion ol li {
+    margin-bottom: 0.5rem;
+}
+
+.producto-seccion a {
+    color: #AB2C79;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.producto-seccion a:hover {
+    text-decoration: underline;
+}
+
+/* CTA: Únete con flecha animada */
+.producto-seccion .cta {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.producto-seccion .cta p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Texto en negro */
+    margin-bottom: 1rem;
+}
+
+/* Flecha animada */
+.producto-seccion .cta .arrow img {
+    width: 30px;
+    height: auto;
+    animation: bounce 2s infinite; /* Animación de rebote */
+    cursor: pointer;
+    filter: invert(0); /* Hace la flecha negra */
+    transition: transform 0.2s ease; /* Transición para efecto clic */
+}
+
+.producto-seccion .cta .arrow img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente al pasar el cursor */
+}
+
+.producto-seccion .cta .arrow img:active {
+    transform: scale(0.9); /* Reduce ligeramente al hacer clic */
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial y final */
+    }
+    50% {
+        transform: translateY(-10px); /* Rebote hacia arriba */
+    }
+}
+
+/* Join us */
+
+.join-us {
+    background-color: #2E2E2E; /* Gris */
+    color: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.join-us h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-divider {
+    border: none;
+    border-top: 2px solid #fff; /* Blanco */
+    margin: 2rem 0; /* Ajusta el espaciado según sea necesario */
+}
+
+hr.section-divider {
+    border: none; /* Asegúrate de que no haya otros bordes */
+    width: auto; /* Permite que los estilos personalizados se apliquen */
+}
+
+hr {
+    border: none; /* Elimina bordes generales */
+    margin: 0; /* Resetea márgenes por defecto */
+    height: 0; /* Elimina cualquier altura general */
+}
+
+.join-us-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinea los elementos desde la parte superior */
+    justify-content: center;
+    gap: 3rem; /* Más espacio entre imagen y texto */
+    flex-wrap: wrap; /* Asegura que se adapte a pantallas pequeñas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.join-us-image {
+    max-width: 40%; /* Imagen ocupa 40% del ancho */
+    height: auto;
+    border-radius: 10px;
+}
+
+.join-us-text {
+    flex: 1;
+    text-align: left;
+}
+
+.join-us-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem; /* Más espacio debajo del texto */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #AB2C79; /* Morado */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px; /* Más redondeado */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem; /* Espaciado extra desde el texto */
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #9C256A;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #2E2E2E; /* Gris */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer .section-divider {
+    margin-bottom: 1rem;
+}
+
+.footer nav {
+    margin-top: 0.5rem;
+}
+
+.footer a {
+    color: #fff; /* Cambiar a blanco */
+    text-decoration: none;
+    font-weight: normal;
+    margin: 0 0.5rem;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Mantiene el subrayado en hover */
+}
+
+/* Login */
+
+.login-section {
+    background: url('../images/login1.png') no-repeat center center/cover; /* Imagen de fondo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2E2E2E;
+}
+
+.login-container label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+    color: #2E2E2E;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.login-container .login-options {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.login-container .login-options a {
+    color: #AB2C79;
+    text-decoration: none;
+}
+
+.login-container .btn {
+    background-color: #AB2C79;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.login-container .btn:hover {
+    background-color: #9C256A;
+}
+
+.login-container .create-account {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #AB2C79;
+    text-decoration: none;
+}
+
+/* Contact */
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Hace que el formulario ocupe todo el espacio disponible */
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2rem; 
+    margin-bottom: 2.1rem;
+    color: #2E2E2E;
+}
+
+
+.contact-container label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+    color: #2E2E2E;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc; /* Línea limpia sin recuadro */
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none; /* Evita el borde predeterminado de enfoque */
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border: 1px solid #AB2C79; /* Resalta al enfocar */
+}
+
+.contact-container .btn {
+    background-color: #AB2C79;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.contact-container .btn:hover {
+    background-color: #9C256A;
+}
+
+/* Singup */
+
+.signup-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    min-height: 100vh; /* Ocupa todo el alto de la pantalla */
+}
+
+.signup-container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #2E2E2E;
+}
+
+.signup-container label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+    color: #2E2E2E;
+}
+
+.signup-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.signup-container input:focus {
+    border: 1px solid #AB2C79;
+}
+
+.signup-container .btn {
+    background-color: #AB2C79;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.signup-container .btn:hover {
+    background-color: #9C256A;
+}
+
+/* Contenedor del checkbox */
+.checkbox-container {
+    margin-top: 1.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #2E2E2E;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #AB2C79; /* Cambia el color del checkbox en navegadores modernos */
+}
+
+.checkbox-container label {
+    font-size: 0.9rem;
+    color: #2E2E2E;
+}
+
+.checkbox-container a {
+    color: #AB2C79;
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+/* air-quality */
+
+.air-quality-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Espacio entre secciones */
+    padding: 4rem 3rem; /* Márgenes superiores e inferiores más amplios */
+    box-sizing: border-box;
+}
+
+.air-quality-item {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Más espacio para el texto */
+    align-items: center;
+    gap: 2rem;
+}
+
+.air-quality-item.reverse {
+    grid-template-columns: 1fr 1.5fr; /* Inversión del orden */
+    direction: rtl; /* Cambiar el orden para texto e imagen */
+}
+
+.air-quality-item.reverse .text {
+    direction: ltr; /* Corregir dirección del texto */
+}
+
+.air-quality-item .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.air-quality-item h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.air-quality-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.air-quality-item ul {
+    padding-left: 1.2rem;
+    list-style: disc;
+    margin: 0;
+}
+
+.air-quality-item img {
+    width: 100%; /* Reducir el tamaño de las imágenes */
+    max-width: 600px; /* Limitar el ancho máximo */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Centrar las imágenes verticalmente */
+}
+
+/* Estilos del contenedor principal */
+.contact-container {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.contact-form input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #AB2C79;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #922569;
+}
+
+/* Sección de contenido */
+
+.content-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2E2E2E;
+}
+
+.content-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2E2E2E;
+}
+
+.content-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.content-container a {
+    color: #AB2C79;
+    text-decoration: none;
+}
+
+.content-container a:hover {
+    text-decoration: underline;
+}
