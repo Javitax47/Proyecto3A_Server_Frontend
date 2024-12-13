@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador</title>
+    <link rel="stylesheet" href="../../src/app/css/styles.css">
+    <link rel="stylesheet" href="../../src/app/css/visualizer.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.heat/dist/leaflet-heat.js"></script>
+</head>
+<body>
+<!-- Header reutilizado -->
+<header class="header header-solid">
+    <div class="header-left">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../../src/app/img/logotipo2.svg" alt="AirMonitor Logo">
+            </a>
+        </div>
+        <nav class="nav-left">
+            <ul>
+                <li><a href="air-quality.html">Conoce el Aire</a></li>
+                <li><a href="./visualizer.html">Mapa</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="nav-right">
+        <a href="login.html">Iniciar sesión</a>
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="visualizador-container">
+    <div id="map"></div>
+
+    <!-- Selector de vista -->
+    <div class="view-selector">
+        <button data-view="heatmap" class="active">Heatmap</button>
+        <button data-view="points">Puntos</button>
+    </div>
+
+    <!-- Selector de fecha -->
+    <div class="date-selector">
+        <label for="fecha">Seleccionar fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+    </div>
+
+
+    <!-- Caja de búsqueda -->
+    <div class="search-box">
+        <button><img src="../../src/app/img/search-icon.png" alt="Buscar" style="opacity: 50%"></button>
+        <input type="text" placeholder="Buscar ubicación...">
+    </div>
+
+    <!-- Selector de tipo de gas -->
+    <div class="gas-selector">
+        <label for="gas-type">Seleccionar tipo de gas:</label>
+        <select id="gas-type" name="gas-type">
+            <option value="calidad">Calidad general</option>
+            <option value="todo">Todo</option>
+            <option value="2">Temperatura</option>
+            <option value="1">Ozono</option>
+        </select>
+    </div>
+
+    <!-- Leyenda del índice -->
+    <div class="index-legend">
+        <h3>Índice de Calidad del Aire</h3>
+        <div>
+            <ul>
+                <li><span class="index-color insalubre"></span> Insalubre</li>
+                <li><span class="index-color moderado"></span> Moderado</li>
+                <li><span class="index-color saludable"></span> Saludable</li>
+            </ul>
+            <div class="gradient-bar">
+                <div class="gradient-labels">
+                    <span>0%</span>
+                    <span>25%</span>
+                    <span>50%</span>
+                    <span>75%</span>
+                    <span>100%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer reutilizado -->
+<footer class="footer">
+    <div class="section-divider"></div>
+    <p>©2023 Airmonitor</p>
+    <nav>
+        <a href="privacy-policy.html">Política de Privacidad</a> |
+        <a href="terms-and-conditions.html">Términos y Condiciones</a> |
+        <a href="contact.html">Contacto</a>
+    </nav>
+</footer>
+
+<script src="../../src/app/js/mapa-general.js"></script>
+</body>
+</html>

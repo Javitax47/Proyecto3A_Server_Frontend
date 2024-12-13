@@ -1,17 +1,25 @@
-// registro.js
-
-document.querySelector('.register-form').addEventListener('submit', async function(event) {
+document.querySelector('form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const username = document.getElementById('username').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
+    const repeatPassword = document.getElementById('repeat-password').value;
 
-    if (password.length < 8) {
-        alert('La contraseña debe tener al menos 8 caracteres.');
+    // Validación de contraseña
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+        alert('La contraseña debe tener al menos 8 caracteres, incluir una letra mayúscula, una minúscula, un número y un carácter especial.');
         return;
     }
 
+    // Validación de coincidencia de contraseñas
+    if (password !== repeatPassword) {
+        alert('Las contraseñas no coinciden.');
+        return;
+    }
+
+    // Validación de correo electrónico
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert('Por favor, introduce un correo electrónico válido.');
