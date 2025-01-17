@@ -4,101 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizador</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
     <link rel="stylesheet" href="../../src/app/css/styles.css">
     <link rel="stylesheet" href="../../src/app/css/visualizer.css">
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet.heat/dist/leaflet-heat.js"></script>
 </head>
 <body>
-<!-- Header reutilizado -->
-<header class="header header-solid">
-    <div class="header-left">
-        <div class="logo">
-            <a href="index.html">
-                <img src="../../src/app/img/logotipo2.svg" alt="AirMonitor Logo">
-            </a>
-        </div>
-        <nav class="nav-left">
-            <ul>
-                <li><a href="air-quality.html">Conoce el Aire</a></li>
-                <li><a href="./visualizer.html">Mapa</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="nav-right">
-        <a href="login.html">Iniciar sesión</a>
-    </div>
-</header>
-
-<!-- Contenido principal -->
-<main class="visualizador-container">
-    <div id="map"></div>
-
-    <!-- Selector de vista -->
-    <div class="view-selector">
-        <button data-view="heatmap" class="active">Heatmap</button>
-        <button data-view="points">Puntos</button>
-    </div>
-
-    <!-- Selector de fecha -->
-    <div class="date-selector">
-        <label for="fecha">Seleccionar fecha:</label>
-        <input type="date" id="fecha" name="fecha">
-    </div>
-
-
-    <!-- Caja de búsqueda -->
-    <div class="search-box">
-        <button><img src="../../src/app/img/search-icon.png" alt="Buscar" style="opacity: 50%"></button>
-        <input type="text" placeholder="Buscar ubicación...">
-    </div>
-
-    <!-- Selector de tipo de gas -->
-    <div class="gas-selector">
-        <label for="gas-type">Seleccionar tipo de gas:</label>
-        <select id="gas-type" name="gas-type">
-            <option value="calidad">Calidad general</option>
-            <option value="todo">Todo</option>
-            <option value="2">Temperatura</option>
-            <option value="1">Ozono</option>
-        </select>
-    </div>
-
-    <!-- Leyenda del índice -->
-    <div class="index-legend">
-        <h3>Índice de Calidad del Aire</h3>
-        <div>
-            <ul>
-                <li><span class="index-color insalubre"></span> Insalubre</li>
-                <li><span class="index-color moderado"></span> Moderado</li>
-                <li><span class="index-color saludable"></span> Saludable</li>
-            </ul>
-            <div class="gradient-bar">
-                <div class="gradient-labels">
-                    <span>0%</span>
-                    <span>25%</span>
-                    <span>50%</span>
-                    <span>75%</span>
-                    <span>100%</span>
-                </div>
+    <!-- Header reutilizado -->
+    <header class="header header-solid">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../../src/app/img/logotipo2.svg" alt="AirMonitor Logo">
+                </a>
             </div>
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="air-quality.html">Conoce el Aire</a></li>
+                    <li><a href="visualizer.html">Mapa</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</main>
+        <div class="nav-right">
+            <a href="login.html">Iniciar sesión</a>
+        </div>
+    </header>  
 
-<!-- Footer reutilizado -->
-<footer class="footer">
-    <div class="section-divider"></div>
-    <p>©2023 Airmonitor</p>
-    <nav>
-        <a href="privacy-policy.html">Política de Privacidad</a> |
-        <a href="terms-and-conditions.html">Términos y Condiciones</a> |
-        <a href="contact.html">Contacto</a>
-    </nav>
-</footer>
+    <!-- Contenido principal -->
+    <main class="visualizador-container">
+        <div class="map-placeholder">
+            <!-- Fondo azul donde irá el mapa -->
+        </div>
 
-<script src="../../src/app/js/mapa-general.js"></script>
+        <!-- Caja de búsqueda -->
+        <div class="search-box">
+            <input type="text" placeholder="Buscar ubicación">
+            <button><img src="../../src/app/img/search-alt-1-svgrepo-com.svg" alt="Buscar"></button>
+        </div>
+
+        <!-- Selector de gases -->
+        <div class="gas-selector">
+            <h3>Gases</h3>
+            <ul>
+                <li><input type="checkbox" id="temperatura"><label for="temperatura"> Temperatura</label></li>
+                <li><input type="checkbox" id="ozono"><label for="ozono"> Ozono</label></li>
+                <li><input type="checkbox" id="actividad"><label for="actividad"> Actividad diaria</label></li>
+            </ul>
+            <a href="air-quality.html" class="info-link">Información sobre los gases</a>
+        </div>
+
+
+        <!-- Indicador del índice -->
+        <div class="index-legend">
+            <h3>Índice</h3>
+            <ul>
+                <li><span class="index-color insalubre"></span> Insalubre (181 - 240 µg/m³)</li>
+                <li><span class="index-color pobre"></span> Pobre (141 - 180 µg/m³)</li>
+                <li><span class="index-color moderado"></span> Moderado (101 - 140 µg/m³)</li>
+                <li><span class="index-color optimo"></span> Óptimo (61 - 100 µg/m³)</li>
+                <li><span class="index-color saludable"></span> Saludable (0 - 60 µg/m³)</li>
+            </ul>
+        </div>
+
+        <!-- Botón de acceso a sensores -->
+        <div class="sensor-access">
+            <a href="sensor.html" class="btn-sensor">Apartado sensor</a>
+        </div>
+    </main>
+
+    <script src="../../src/app/js/mapa-general.js"></script>
 </body>
 </html>

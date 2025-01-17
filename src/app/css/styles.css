@@ -666,6 +666,75 @@ hr {
 
 /* air-quality */
 
+/* AQI Section */
+.aqi-info {
+    background-color: #f9f9f9;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aqi-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2E2E2E;
+}
+
+.aqi-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.aqi-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.aqi-info li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.aqi-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+/* AQI Colors */
+.aqi-color.saludable {
+    background-color: #38A169; /* Verde */
+}
+
+.aqi-color.moderado {
+    background-color: #F4E04D; /* Amarillo */
+}
+
+.aqi-color.pobre {
+    background-color: #F4A261; /* Naranja */
+}
+
+.aqi-color.insalubre {
+    background-color: #E63946; /* Rojo */
+}
+
+.aqi-color.peligroso {
+    background-color: #6A0572; /* Morado */
+}
+
+
 .air-quality-content {
     display: flex;
     flex-direction: column;
@@ -741,19 +810,19 @@ hr {
     font-weight: 700;
 }
 
-.contact-form, .reset-password-form {
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-.contact-form label, .reset-password-form label {
+.contact-form label {
     font-size: 1rem;
     font-weight: 600;
     text-align: left;
 }
 
-.contact-form input, .reset-password-form input {
+.contact-form input {
     padding: 0.8rem;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -762,7 +831,7 @@ hr {
     box-sizing: border-box;
 }
 
-.contact-form button, .reset-password-form button {
+.contact-form button {
     padding: 0.8rem;
     font-size: 1rem;
     font-weight: 600;
@@ -774,7 +843,7 @@ hr {
     transition: background 0.3s ease;
 }
 
-.contact-form button:hover, .reset-password-form button:hover {
+.contact-form button:hover {
     background-color: #922569;
 }
 
@@ -824,4 +893,346 @@ hr {
 
 .content-container a:hover {
     text-decoration: underline;
+}
+
+/* Admin Section */
+.admin-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container h1, .admin-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2E2E2E;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.admin-container h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Statistics Section */
+.stats-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.stat h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #AB2C79;
+}
+
+/* User Management Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background: #AB2C79;
+    color: #fff;
+}
+
+thead th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+tbody td {
+    padding: 0.8rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Botón de suspensión */
+.suspend-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.suspend-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.suspend-btn:hover {
+    background: rgba(255, 0, 0, 0.1); /* Fondo rojo tenue */
+}
+
+/* Estilo para las filas suspendidas */
+.inactive-row {
+    opacity: 0.5; /* Reducir opacidad */
+    pointer-events: none; /* Desactivar interactividad */
+}
+
+/* Restablecer estado activo */
+.inactive-row .suspend-btn {
+    pointer-events: auto; /* Asegurarse de que el botón sigue siendo interactivo */
+    opacity: 1;
+}
+
+/* Fila con usuario suspendido */
+.inactive-row {
+    opacity: 0.5; /* Reducir opacidad */
+}
+
+/* Estilo de la circunferencia */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.status-indicator.active {
+    background-color: #38A169; /* Verde para activo */
+}
+
+.status-indicator.inactive {
+    background-color: #E63946; /* Rojo para inactivo */
+}
+
+/* Tooltip */
+.status-indicator::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.status-indicator:hover::after {
+    opacity: 1; /* Muestra el tooltip al pasar el cursor */
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-edit {
+    background: #38A169;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: #2F855A;
+}
+
+.btn-delete {
+    background: #E63946;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #C53030;
+}
+
+/* Header-specific for admin */
+.header-solid .nav-left ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-solid .nav-left a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.header-solid .nav-left a:hover {
+    text-decoration: underline;
+}
+
+/* Filtros */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.filters label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.filter-dropdown {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#search-user {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background: #AB2C79;
+    color: #fff;
+}
+
+thead th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+tbody td {
+    padding: 0.8rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Botones */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-edit {
+    background: #38A169;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: #2F855A;
+}
+
+.btn-delete {
+    background: #E63946;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #C53030;
+}
+
+/* Flechas de ordenación */
+.sort-arrow {
+    font-size: 0.8rem;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.sort-arrow.asc {
+    content: "▲";
+}
+
+.sort-arrow.desc {
+    content: "▼";
+}
+
+/* Cuadro de búsqueda */
+.search-box {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.search-box input {
+    width: fit-content;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease-in-out;
+}
+
+.search-box input:focus {
+    border-color: #AB2C79;
 }

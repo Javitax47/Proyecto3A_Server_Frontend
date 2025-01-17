@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     try {
-        const response = await fetch(`http://localhost:13000/usuarios/login/${email}/${password}`);
+        const response = await fetch(`http://airmonitor.ddns.net:13000/usuarios/login/${email}/${password}`);
         if (response.ok) {
             const data = await response.json();
             const user = data.user;
