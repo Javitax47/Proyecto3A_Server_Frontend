@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - AirMonitor</title>
+    <link rel="stylesheet" href="../../src/app/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../../src/app/js/order-admin.js"></script>
+    <script src="../../src/app/js/admin-actions.js"></script>
+    <script src="../../src/app/js/toggle-account.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header-solid">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../../src/app/img/logotipo2.svg" alt="AirMonitor Logo">
+                </a>
+            </div>
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="logout.html">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="admin-container">
+        <h1>Panel de Administración</h1>
+
+        <!-- Estadísticas -->
+        <section class="stats">
+            <h2>Estadísticas Generales</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3>Total de Usuarios</h3>
+                    <p id="total-users">345</p>
+                </div>
+            
+                <div class="stat">
+                    <h3>Sensores Activos</h3>
+                    <p id="active-sensors">56</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="user-management">
+            <h2>Gestión de Usuarios</h2>
+            
+            <!-- Cuadro de búsqueda -->
+            <div class="search-box">
+                <input type="text" id="user-search" placeholder="Buscar usuario...">
+            </div>
+
+            <!-- Tabla de usuarios -->
+            <table>
+                <thead>
+                    <tr>
+                        <th data-column="name" data-order="asc">Nombre <span class="sort-arrow">▲</span></th>
+                        <th data-column="email" data-order="asc">Correo Electrónico <span class="sort-arrow">▲</span></th>
+                        <th data-column="sensor" data-order="asc">UUID Sensor <span class="sort-arrow">▲</span></th>
+                        <th data-column="lastMeasurement" data-order="asc">Última Medición <span class="sort-arrow">▲</span></th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table">
+                    <tr>
+                        <td>
+                            <span class="status-indicator active" data-tooltip="Activo"></span> <!-- Circunferencia activa -->
+                            Juan Pérez
+                        </td>
+                        <td>juan@example.com</td>
+                        <td>123e4567-e89b-12d3-a456-426614174000</td>
+                        <td>2025-01-15 22:30</td>
+                        <td class="status">Habilitado</td> <!-- Aquí está corregido -->
+                        <td>
+                            <button class="suspend-btn">
+                                <img src="../../src/app/img/turn-off-svgrepo-com.svg" alt="Suspender usuario" title="Suspender cuenta">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="status-indicator inactive" data-tooltip="Inactivo"></span> <!-- Circunferencia inactiva -->
+                            María López
+                        </td>
+                        <td>maria@example.com</td>
+                        <td>987e6543-b21d-34f7-c891-123456789abc</td>
+                        <td>2023-12-01 10:45</td>
+                        <td class="status">Deshabilitado</td> <!-- Aquí está corregido -->
+                        <td>
+                            <button class="suspend-btn">
+                                <img src="../../src/app/img/turn-off-svgrepo-com.svg" alt="Reactivar usuario" title="Reactivar cuenta">
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>                                                                              
+            </table>
+        </section>        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-divider"></div>
+        <p>©2023 AirMonitor</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../src/app/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* Header */
+.header {
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto;
+    padding: 1rem 2rem;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal del visualizador */
+.visualizador-container {
+    position: relative; /* Asegura que los elementos se posicionen dentro */
+    margin-top: 4rem; /* Espacio para el header */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: calc(100vh - 4rem); /* Altura completa menos el header */
+    background-color: #ADD8E6; /* Fondo azul claro */
+    overflow: hidden; /* Evita que elementos se desborden */
+}
+
+/* Caja de búsqueda */
+.search-box {
+    position: absolute;
+    top: 20px; /* Margen superior */
+    left: 60px; /* Margen izquierdo */
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.search-box img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Selector de gases */
+.gas-selector {
+    position: absolute;
+    top: 20px; /* Margen superior */
+    right: 20px; /* Margen derecho */
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.gas-selector h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.gas-selector ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gas-selector li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.gas-selector label {
+    margin-left: 0.5rem;
+}
+
+.gas-selector .info-link {
+    display: block;
+    margin-top: 1rem; /* Espaciado superior */
+    font-size: 0.9rem;
+    color: #AB2C79; /* Morado */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center; /* Centrado */
+    transition: color 0.3s;
+}
+
+.gas-selector .info-link:hover {
+    color: #9C256A; /* Morado más oscuro al pasar el ratón */
+}
+
+
+/* Leyenda del índice */
+.index-legend {
+    position: absolute;
+    bottom: 20px; /* Margen inferior */
+    right: 20px; /* Margen derecho */
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.index-legend h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.index-legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.index-legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.index-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+}
+
+.index-color.insalubre {
+    background-color: #E63946;
+}
+
+.index-color.pobre {
+    background-color: #F4A261;
+}
+
+.index-color.moderado {
+    background-color: #F4E04D;
+}
+
+.index-color.optimo {
+    background-color: #2A9D8F;
+}
+
+.index-color.saludable {
+    background-color: #38A169;
+}
+
+/* Botón de acceso a sensores */
+.sensor-access {
+    position: absolute;
+    bottom: 20px; /* Margen inferior */
+    left: 20px; /* Margen izquierdo */
+}
+
+.btn-sensor {
+    display: inline-block;
+    background-color: #AB2C79;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-sensor:hover {
+    background-color: #9C256A;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.leaflet-pane {
+     z-index: 0; !important;
+}

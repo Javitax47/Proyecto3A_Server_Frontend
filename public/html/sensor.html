@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor</title>
+    <link rel="stylesheet" href="../../src/app/css/styles.css">
+    <link rel="stylesheet" href="../../src/app/css/sensor.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="../../src/app/js/chartLast30Days.js"></script>
+</head>
+<body>
+    <!-- Header reutilizado -->
+    <header class="header header-solid">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../../src/app/img/logotipo2.svg" alt="AirMonitor Logo">
+                </a>
+            </div>
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="air-quality.html">Conoce el Aire</a></li>
+                    <li><a href="visualizer.html">Mapa</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="#">joseluis420</a>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="sensor-container">
+        <!-- Información principal -->
+        <div class="sensor-info-top">
+            <div class="user-greeting">
+                <h1>Hola, Gerard de la Fuente</h1>
+                <p>Aquí tienes los datos de tu sensor</p>
+                <p>dhb iashd asdnb asdfb asjifb nf adsnbf oabnsdf eojfn wejodn oedob awwjkdfnasdfbnkljasnf nasdkljasdnf</p>
+                <a href="visualizer.html" class="btn">Vista mapa</a>
+            </div>
+            <div class="sensor-face">
+                <img src="../../src/app/img/face_green.svg" alt="Estado del sensor">
+            </div>
+        </div>
+
+        <!-- Datos del sensor -->
+        <div class="sensor-data">
+            <h2>Tus datos</h2>
+            <div class="data-container">
+                <div class="data-item">
+                    <h3><span class="value">23</span>°C <span class="indicator">•</span></h3>
+                    <p>Temperatura</p>
+                    <div class="chart-placeholder">
+                        <canvas id="temperatureChart"></canvas>
+                    </div>
+                </div>
+                <div class="data-item">
+                    <h3><span class="value">23</span>ppm <span class="indicator">•</span></h3>
+                    <p>Ozono</p>
+                    <div class="chart-placeholder">
+                        <canvas id="ozoneChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estado del sensor -->
+        <div class="sensor-status">
+            <h2>Tu sensor</h2>
+            <div class="sensor-info">
+                <div class="sensor-name">
+                    <p>AirMonitor 2</p>
+                </div>
+                <div class="sensor-toggle on">ON</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

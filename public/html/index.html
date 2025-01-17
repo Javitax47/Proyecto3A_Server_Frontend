@@ -1,43 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensores</title>
-    <link rel="stylesheet" href="../../src/app/css/styles.css">
-</head>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AirMonitor</title>
+        <link rel="stylesheet" href="../../src/app/css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>    
 <body>
-<h1>Datos de Sensores</h1>
-<div class="container">
-    <h1>Monitor de Ozono y Temperatura</h1>
+    <header class="header header-transparent">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../../src/app/img/logotipo.svg" alt="AirMonitor Logo">
+                </a>
+            </div>
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="air-quality.html">Conoce el Aire</a></li>
+                    <li><a href="visualizer.html">Mapa</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="login.html">Iniciar sesión</a>
+        </div>
+    </header>    
+      
+    <section class="hero">
+        <h1>Calidad en cada respiro</h1>
+        <a href="#about" class="cta">Descubre más</a>
+        <div class="arrow">
+            <a href="#about">
+                <img src="../../src/app/img/chevron-down-svgrepo-com.svg" alt="Flecha hacia abajo">
+            </a>
+        </div>
+    </section> 
 
-    <div class="sensor">
-        <h2><span id="indicador-deteccion-ozono-izq"></span> Sensor de Ozono <span id="indicador-deteccion-ozono-der"></span></h2>
-        <p><strong>Valor actual:</strong> <span id="ozone-value">0</span> ppm</p>
-        <p><strong>Última medición:</strong> <span id="ozone-last-updated">--/--/----, --:--:--</span></p>
-    </div>
+    <section id="about" class="about">
+        <h2>¿Qué es AirMonitor?</h2>
+        <hr class="section-divider divider-black">
+        <div class="content">
+            <h3>Sobre nosotros</h3>
+            <p>
+                AirMonitor es una empresa joven y comprometida con el medio ambiente.
+                Nacimos en 2024 en la Universitat Politècnica de València, fundados por
+                cuatro estudiantes con una pasión compartida: transformar la tecnología
+                en soluciones reales para un futuro más limpio y saludable.
+            </p>
+            <h3>Datos para todo el mundo</h3>
+            <p>
+                Nuestro objetivo es ofrecerte información en tiempo real sobre la calidad
+                del aire a tu alrededor. Queremos empoderar a las personas y comunidades
+                para que puedan tomar decisiones informadas sobre su salud y bienestar.
+            </p>
+        </div>
+        <img src="../../src/app/img/happy_users.jpg" alt="Usuarios felices" class="about-image">
+    </section>
 
-    <div class="sensor">
-        <h2><span id="indicador-deteccion-temp-izq"></span> Sensor de Temperatura <span id="indicador-deteccion-temp-der"></span></h2>
-        <p><strong>Valor actual:</strong> <span id="temperature-value">0</span> °C</p>
-        <p><strong>Última medición:</strong> <span id="temperature-last-updated">--/--/----, --:--:--</span></p>
-    </div>
-
-    <div class="button-container">
-        <button onclick="location.href='mi_cuenta.html'">Ir a Mi Cuenta</button>
-        <button onclick="location.href='login.html'">Iniciar Sesión</button>
-        <button onclick="location.href='registro.html'">Crear Cuenta</button>
-    </div>
-</div>
-<script src="../../src/app/js/api.js"></script>
-
-<!-- Footer importado dinámicamente -->
-<script>
-    fetch('../assets/includes/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.body.insertAdjacentHTML('beforeend', data);
-        });
-</script>
+    <section id="nuestro-producto" class="producto-seccion">
+        <div class="contenedor">
+            <h2 class="titulo">Nuestro Producto</h2>
+            <p class="introduccion">
+                Descubre el sensor <strong>AirMonitor</strong>, una solución accesible para monitorear en tiempo real la calidad del aire 
+                y contribuir a un proyecto innovador de recolección de datos.
+            </p>
+            <div class="caracteristicas">
+                <h3>Características del Sensor AirMonitor</h3>
+                <ul>
+                    <li>Monitorea contaminantes como el Ozono en tiempo real.</li>
+                    <li>Conexión Bluetooth LE para sincronización automática con tu móvil.</li>
+                    <li>Compacto, ligero y fácil de usar, ideal para llevar en mochilas o bolsos.</li>
+                </ul>
+            </div>
+            <div class="como-funciona">
+                <h3>¿Cómo funciona?</h3>
+                <ol>
+                    <li>
+                        <strong>Compra tu sensor:</strong> Encuéntralo en grandes superficies como: 
+                        <a href="https://www.carrefour.es" target="_blank">Carrefour</a>, 
+                        <a href="https://www.leroymerlin.es" target="_blank">Leroy Merlin</a>, 
+                        <a href="https://www.mediamarkt.es" target="_blank">MediaMarkt</a> y 
+                        <a href="https://www.elcorteingles.es" target="_blank">El Corte Inglés</a>.
+                    </li>
+                    <li>
+                        <strong>Descarga la app AirMonitor:</strong> Visualiza datos y mapas en tiempo real directamente desde tu móvil.
+                    </li>
+                    <li>
+                        <strong>Contribuye al proyecto:</strong> Tus datos se utilizan para crear mapas de contaminación que benefician a toda la comunidad.
+                    </li>
+                </ol>
+            </div>
+            <div class="recompensas">
+                <h3>Recompensas para nuestros usuarios</h3>
+                <p>
+                    Como poseedor de un nodo AirMonitor, participarás automáticamente en sorteos exclusivos para ganar 
+                    entradas a eventos privados, gadgets tecnológicos y otras sorpresas.
+                </p>
+            </div>
+            <div class="cta">
+                <p>Únete</p>
+                <div class="arrow">
+                    <a href="#join-us">
+                        <img src="../../src/app/img/chevron-down-svgrepo-com.svg" alt="Flecha hacia abajo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+    <section id="join-us" class="join-us">
+        <h2>¿Quieres formar parte del cambio?</h2>
+        <div class="section-divider"></div>
+        <div class="join-us-content">
+            <img src="../../src/app/img/users.jpg" alt="Personas colaborando" class="join-us-image">
+            <div class="join-us-text">
+                <p>
+                    ¡Te necesitamos! Cada pequeña acción suma. Al unirte a AirMonitor, no solo recibirás información útil para proteger tu salud, sino que también estarás contribuyendo a la recolección de datos importantes para nuestro futuro.
+                </p>
+                <a href="singup.html" class="btn">Crear cuenta</a>
+            </div>
+        </div>
+    </section>    
+    
+    <footer class="footer">
+        <div class="section-divider"></div>
+        <p>©2023 Airmonitor</p>
+        <nav>
+            <a href="privacy-policy.html">Política de Privacidad</a> |
+            <a href="terms-and-conditions.html">Términos y Condiciones</a> |
+            <a href="contact.html">Contacto</a>
+        </nav>
+    </footer>    
+    
 </body>
 </html>
